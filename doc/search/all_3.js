@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fila',['Fila',['../classedb1_1_1Fila.html',1,'edb1']]],
-  ['fila',['Fila',['../classedb1_1_1Fila.html#aeab1ecc403db4487f7f309458b216095',1,'edb1::Fila']]]
+  ['dado',['dado',['../classedb1_1_1Node.html#adf936107c9f249d10b1043a495aeb58d',1,'edb1::Node']]]
 ];

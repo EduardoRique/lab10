@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
       <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
@@ -63,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Lista&#160;de&#160;Componentes</span></a></li>
       <li class="current"><a href="classes.html"><span>Índice&#160;dos&#160;Componentes</span></a></li>
+      <li><a href="inherits.html"><span>Hierarquia&#160;de&#160;Classes</span></a></li>
       <li><a href="functions.html"><span>Componentes&#160;Membros</span></a></li>
     </ul>
   </div>
@@ -72,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,23 +88,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">Índice dos Componentes</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_L">L</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a></div>
+<div class="qindex"><a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_L">L</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_V">V</a>&#160;|&#160;<a class="qindex" href="#letter_W">W</a></div>
 <table style="margin: 10px; white-space: nowrap;" align="center" width="95%" border="0" cellspacing="0" cellpadding="0">
-<tr><td rowspan="2" valign="bottom"><a name="letter_F"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;F&#160;&#160;</div></td></tr></table>
+<tr><td rowspan="2" valign="bottom"><a name="letter_C"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;C&#160;&#160;</div></td></tr></table>
 </td><td rowspan="2" valign="bottom"><a name="letter_L"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;L&#160;&#160;</div></td></tr></table>
-</td><td rowspan="2" valign="bottom"><a name="letter_N"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;N&#160;&#160;</div></td></tr></table>
 </td><td rowspan="2" valign="bottom"><a name="letter_P"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;P&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_W"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;W&#160;&#160;</div></td></tr></table>
+</td><td></td></tr>
+<tr><td></td></tr>
+<tr><td valign="top"><a class="el" href="classCheio.html">Cheio</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classedb1_1_1Lista.html">Lista</a> (<a class="el" href="namespaceedb1.html">edb1</a>)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classedb1_1_1Pilha.html">Pilha</a> (<a class="el" href="namespaceedb1.html">edb1</a>)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classWrongType.html">WrongType</a>&#160;&#160;&#160;</td><td></td></tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_F"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;F&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_N"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;N&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_V"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;V&#160;&#160;</div></td></tr></table>
 </td><td rowspan="2" valign="bottom"><a name="letter_p"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;p&#160;&#160;</div></td></tr></table>
-</td></tr>
-<tr></tr>
-<tr><td valign="top"><a class="el" href="classedb1_1_1Fila.html">Fila</a> (edb1)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classedb1_1_1Lista.html">Lista</a> (edb1)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classedb1_1_1Node.html">Node</a> (edb1)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classedb1_1_1Pilha.html">Pilha</a> (edb1)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classpilha.html">pilha</a>&#160;&#160;&#160;</td></tr>
+</td><td></td></tr>
+<tr><td></td></tr>
+<tr><td valign="top"><a class="el" href="classedb1_1_1Fila.html">Fila</a> (<a class="el" href="namespaceedb1.html">edb1</a>)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classedb1_1_1Node.html">Node</a> (<a class="el" href="namespaceedb1.html">edb1</a>)&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classVazio.html">Vazio</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classpilha.html">pilha</a>&#160;&#160;&#160;</td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
 </table>
-<div class="qindex"><a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_L">L</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a></div>
+<div class="qindex"><a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_L">L</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_V">V</a>&#160;|&#160;<a class="qindex" href="#letter_W">W</a></div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 25 de Junho de 2017 23:57:52 para Laboratorio 9 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 26 de Junho de 2017 16:57:47 para Laboratorio 9 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

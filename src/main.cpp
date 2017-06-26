@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <typeinfo>
 #include "eduardo.h"
 
 using namespace std;
@@ -20,32 +21,76 @@ using namespace edb1;
 
 int main(){
 
+    char t = 'a';
+
     //Testa a classe lista
+    cout << "---------------------" << endl;
     cout << "Teste de lista ligada" << endl;
+    cout << "---------------------" << endl;
     Lista<int> *lista = new Lista<int>();
     lista->Inserir(10);
     lista->Print();
+    
+    try{
+            if(typeid(int) != typeid(t)) throw WrongType();
+            else{
+                lista->Inserir(t);
+            }
+        }
+        catch(WrongType &w){
+            cerr << w.what() << endl;
+        }
 
     //Testa a classe pilha
+    cout << "--------------" << endl;
     cout << "Teste de pilha" << endl;
+    cout << "--------------" << endl;
     Pilha<int> pilha(2);
     pilha.push(10);
     pilha.push(12);
+    pilha.push(20);
+
+    try{
+            if(typeid(int) != typeid(t)) throw WrongType();
+            else{
+                pilha.push(t);
+            }
+        }
+        catch(WrongType &w){
+            cerr << w.what() << endl;
+        }
+
     cout << pilha.pop() << endl;
     cout << pilha.pop() << endl;
+    pilha.pop();
 
     //Testa a classe pilha
+    cout << "-------------" << endl;
     cout << "Teste de fila" << endl;
+    cout << "-------------" << endl;
     Fila<int> fila(2);
     fila.push(10);
     fila.push(12);
     fila.push(20);
+
+    try{
+            if(typeid(int) != typeid(t)) throw WrongType();
+            else{
+                pilha.push(t);
+            }
+        }
+        catch(WrongType &w){
+            cerr << w.what() << endl;
+        }
+
     cout << fila.pop() << endl;
     cout << fila.pop() << endl;
-    cout << fila.pop() << endl;
+    fila.pop();
 
     //Testa as buscas
+    cout << "----------------" << endl;
     cout << "Testes de buscas" << endl;
+    cout << "----------------" << endl;
     int V[100];
     for(int i = 0; i < 100; i++){ 
         V[i] = i + 1;

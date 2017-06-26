@@ -7,22 +7,24 @@
 
 var indexSectionsWithContent =
 {
-  0: "abdfilmnpr~",
-  1: "flnp",
-  2: "blmp",
-  3: "filmnpr~",
-  4: "adp",
-  5: "l"
+  0: "abcdefilmnprvw~",
+  1: "cflnpvw",
+  2: "e",
+  3: "blmp",
+  4: "bfilmnpr~",
+  5: "adp",
+  6: "l"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables",
-  5: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "pages"
 };
 
 function convertToId(search)

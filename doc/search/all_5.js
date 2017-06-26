@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['lista',['Lista',['../classedb1_1_1Lista.html',1,'edb1']]],
-  ['lista',['Lista',['../classedb1_1_1Lista.html#af6a6a8c28504bb544353bbe998188262',1,'edb1::Lista']]],
-  ['lista_2eh',['lista.h',['../lista_8h.html',1,'']]],
-  ['lab10',['lab10',['../md_README.html',1,'']]]
+  ['fila',['Fila',['../classedb1_1_1Fila.html',1,'edb1']]],
+  ['fila',['Fila',['../classedb1_1_1Fila.html#aeab1ecc403db4487f7f309458b216095',1,'edb1::Fila']]]
 ];

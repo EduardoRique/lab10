@@ -11,7 +11,9 @@
 
 #include <iostream>
 #include <string>
+#include "trata.h"
 using std::cout;
+using std::cerr;
 using std::endl;
 using std::string;
 
@@ -54,11 +56,17 @@ namespace edb1 {
     */
     template<typename T>
     int Pilha<T>::push(T el){
-        if(tamanho == tamanhomax){
-            return tamanho;
+        try{
+            if(tamanho == tamanhomax) throw Cheio();
+            else{
+                pilha[tamanho] = el;
+                return tamanho++;
+            }
         }
-        pilha[tamanho] = el;
-        return tamanho++;
+        catch (Cheio &c) {
+            cerr << c.what() << endl;
+        }
+        return tamanho;
     }
 
     /**
@@ -67,10 +75,16 @@ namespace edb1 {
     */
     template<typename T>
     T Pilha<T>::pop(){
-        if(tamanho == 0){
-            return tamanho;
+        try{
+            if(tamanho == 0) throw Vazio();
+            else{
+                return pilha[--tamanho];
+            }
         }
-        return pilha[--tamanho];
+        catch(Vazio &v){
+            cerr << v.what() << endl;
+        }
+        return 0;
     }
 }
 

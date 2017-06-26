@@ -1,3 +1,7 @@
 Erros esperados:
 
 Estouro de pilha;
+Estouro de fila;
+Pilha vazia;
+Fila vazia;
+Inserir elemento de tipo diferente do container que será inserido;

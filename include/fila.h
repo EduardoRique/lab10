@@ -11,8 +11,9 @@
 
 #include <iostream>
 #include <string>
-#include <stdexcept>
+#include "trata.h"
 using std::cout;
+using std::cerr;
 using std::endl;
 using std::string;
 
@@ -55,12 +56,17 @@ namespace edb1 {
     */
     template<typename T>
     int Fila<T>::push(T el){
-        if(tamanho == tamanhomax){
-            cout << "Erro: tamanho limite da fila já atingido" << endl;
-            return tamanho;
+        try{
+            if(tamanho == tamanhomax) throw Cheio();
+            else{
+                fila[tamanho] = el;
+                return tamanho++;
             }
-        fila[tamanho] = el;
-        return tamanho++;
+        }
+        catch (Cheio &c) {
+            cerr << c.what() << endl;
+        }
+        return tamanho;
     }
 
     /**
@@ -69,16 +75,21 @@ namespace edb1 {
     */
     template<typename T>
     T Fila<T>::pop(){
-        if(tamanho == 0){
-            cout << "Erro: A fila já está vazia" << endl;
-            return tamanho;
+        try{
+            if(tamanho == 0) throw Vazio();
+            else{
+                tamanho--;
+                T el = fila[0];
+                for(int i = 0; i < tamanho; i++){
+                    fila[i] = fila[i + 1];
+                }
+                return el;
+            }
         }
-        tamanho--;
-        T el = fila[0];
-        for(int i = 0; i < tamanho; i++){
-            fila[i] = fila[i + 1];
+        catch(Vazio &v){
+            cerr << v.what() << endl;
         }
-        return el;
+        return 0;
     }
 }
 
