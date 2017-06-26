@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdexcept>
 using std::cout;
 using std::endl;
 using std::string;
@@ -55,8 +56,9 @@ namespace edb1 {
     template<typename T>
     int Fila<T>::push(T el){
         if(tamanho == tamanhomax){
+            cout << "Erro: tamanho limite da fila já atingido" << endl;
             return tamanho;
-        }
+            }
         fila[tamanho] = el;
         return tamanho++;
     }
@@ -68,6 +70,7 @@ namespace edb1 {
     template<typename T>
     T Fila<T>::pop(){
         if(tamanho == 0){
+            cout << "Erro: A fila já está vazia" << endl;
             return tamanho;
         }
         tamanho--;

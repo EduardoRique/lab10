@@ -39,6 +39,8 @@ int main(){
     Fila<int> fila(2);
     fila.push(10);
     fila.push(12);
+    fila.push(20);
+    cout << fila.pop() << endl;
     cout << fila.pop() << endl;
     cout << fila.pop() << endl;
 
