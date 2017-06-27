@@ -162,7 +162,7 @@ namespace edb1 {
             delete tmp;
         }
         else{
-            cout << "Elemento para ser removido não encontrado" << endl;
+            cout << "Operação inválida: Elemento para ser removido não encontrado" << endl;
         }
     }
 }

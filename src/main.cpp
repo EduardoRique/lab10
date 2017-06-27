@@ -30,7 +30,7 @@ int main(){
     Lista<int> *lista = new Lista<int>();
     lista->Inserir(10);
     lista->Print();
-    
+    //Erro de insercao
     try{
             if(typeid(int) != typeid(t)) throw WrongType();
             else{
@@ -40,6 +40,9 @@ int main(){
         catch(WrongType &w){
             cerr << w.what() << endl;
         }
+    //Erro de remocao para elemento que nao esta na lista
+    lista->Remover(20);
+
 
     //Testa a classe pilha
     cout << "--------------" << endl;
@@ -49,7 +52,7 @@ int main(){
     pilha.push(10);
     pilha.push(12);
     pilha.push(20);
-
+    //Erro de insercao
     try{
             if(typeid(int) != typeid(t)) throw WrongType();
             else{
@@ -62,6 +65,7 @@ int main(){
 
     cout << pilha.pop() << endl;
     cout << pilha.pop() << endl;
+    //erro pilha vazia
     pilha.pop();
 
     //Testa a classe pilha
@@ -72,7 +76,7 @@ int main(){
     fila.push(10);
     fila.push(12);
     fila.push(20);
-
+    //Erro de insercao
     try{
             if(typeid(int) != typeid(t)) throw WrongType();
             else{
@@ -85,6 +89,7 @@ int main(){
 
     cout << fila.pop() << endl;
     cout << fila.pop() << endl;
+    //erro fila vazia
     fila.pop();
 
     //Testa as buscas
@@ -101,6 +106,67 @@ int main(){
     cout <<  busca_bin_r(V, 0, 100, 65) << endl;
     cout <<  busca_ter_i(V, 0, 100, 85) << endl;
     cout <<  busca_ter_r(V, 0, 100, 10) << endl;
+    
+    //Erro para elemento não encontrado no vetor
+    try{
+        if(busca_seq_i(V, 0, 100, 111) == -1) throw NaoEncontrado();
+        else{
+            cout << busca_seq_i(V, 0, 100, 111) << endl;
+        }
+    }
+    catch(NaoEncontrado &n){
+        cerr << n.what() << endl;
+    }
+
+    try{
+        if(busca_seq_r(V, 0, 100, 111) == -1) throw NaoEncontrado();
+        else{
+            cout << busca_seq_r(V, 0, 100, 111) << endl;
+        }
+    }
+    catch(NaoEncontrado &n){
+        cerr << n.what() << endl;
+    }
+
+    try{
+        if(busca_bin_i(V, 0, 100, 111) == -1) throw NaoEncontrado();
+        else{
+            cout << busca_bin_i(V, 0, 100, 111) << endl;
+        }
+    }
+    catch(NaoEncontrado &n){
+        cerr << n.what() << endl;
+    }
+
+    try{
+        if(busca_bin_r(V, 0, 100, 111) == -1) throw NaoEncontrado();
+        else{
+            cout << busca_bin_r(V, 0, 100, 111) << endl;
+        }
+    }
+    catch(NaoEncontrado &n){
+        cerr << n.what() << endl;
+    }
+
+    try{
+        if(busca_ter_i(V, 0, 100, 111) == -1) throw NaoEncontrado();
+        else{
+            cout << busca_ter_i(V, 0, 100, 111) << endl;
+        }
+    }
+    catch(NaoEncontrado &n){
+        cerr << n.what() << endl;
+    }
+
+    try{
+        if(busca_ter_r(V, 0, 100, 111) == -1) throw NaoEncontrado();
+        else{
+            cout << busca_ter_r(V, 0, 100, 111) << endl;
+        }
+    }
+    catch(NaoEncontrado &n){
+        cerr << n.what() << endl;
+    }
 
     return 0;
 }

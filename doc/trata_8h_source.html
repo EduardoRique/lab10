@@ -98,31 +98,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::overflow_error;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> std::underflow_error;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> std::domain_error;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> std::out_of_range;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classCheio.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCheio.html">Cheio</a>: <span class="keyword">public</span> overflow_error {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classCheio.html">Cheio</a>() : overflow_error(<span class="stringliteral">&quot;Operacao invalida: Container lotado&quot;</span>) {}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classVazio.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVazio.html">Vazio</a>: <span class="keyword">public</span> underflow_error {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classVazio.html">Vazio</a>() : underflow_error(<span class="stringliteral">&quot;Operacao invalida: Container vazio&quot;</span>) {}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classWrongType.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classWrongType.html">WrongType</a>: <span class="keyword">public</span> domain_error {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classWrongType.html">WrongType</a>() : domain_error(<span class="stringliteral">&quot;Operacao invalida: Não é possivel inserir elementos de outro tipo&quot;</span>) {}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classWrongType_html"><div class="ttname"><a href="classWrongType.html">WrongType</a></div><div class="ttdef"><b>Definition:</b> trata.h:21</div></div>
-<div class="ttc" id="classVazio_html"><div class="ttname"><a href="classVazio.html">Vazio</a></div><div class="ttdef"><b>Definition:</b> trata.h:16</div></div>
-<div class="ttc" id="classCheio_html"><div class="ttname"><a href="classCheio.html">Cheio</a></div><div class="ttdef"><b>Definition:</b> trata.h:11</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classCheio.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCheio.html">Cheio</a>: <span class="keyword">public</span> overflow_error {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classCheio.html">Cheio</a>() : overflow_error(<span class="stringliteral">&quot;Operacao invalida: Container lotado&quot;</span>) {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classVazio.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVazio.html">Vazio</a>: <span class="keyword">public</span> underflow_error {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classVazio.html">Vazio</a>() : underflow_error(<span class="stringliteral">&quot;Operacao invalida: Container vazio&quot;</span>) {}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classWrongType.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classWrongType.html">WrongType</a>: <span class="keyword">public</span> domain_error {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classWrongType.html">WrongType</a>() : domain_error(<span class="stringliteral">&quot;Operacao invalida: Não é possivel inserir elementos de outro tipo&quot;</span>) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classNaoEncontrado.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNaoEncontrado.html">NaoEncontrado</a>: <span class="keyword">public</span> out_of_range {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classNaoEncontrado.html">NaoEncontrado</a>() : out_of_range(<span class="stringliteral">&quot;Operacao invalida: Elemento não encontrado&quot;</span>) {}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classNaoEncontrado_html"><div class="ttname"><a href="classNaoEncontrado.html">NaoEncontrado</a></div><div class="ttdef"><b>Definition:</b> trata.h:27</div></div>
+<div class="ttc" id="classWrongType_html"><div class="ttname"><a href="classWrongType.html">WrongType</a></div><div class="ttdef"><b>Definition:</b> trata.h:22</div></div>
+<div class="ttc" id="classVazio_html"><div class="ttname"><a href="classVazio.html">Vazio</a></div><div class="ttdef"><b>Definition:</b> trata.h:17</div></div>
+<div class="ttc" id="classCheio_html"><div class="ttname"><a href="classCheio.html">Cheio</a></div><div class="ttdef"><b>Definition:</b> trata.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 26 de Junho de 2017 16:57:47 para Laboratorio 9 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 26 de Junho de 2017 23:38:10 para Laboratorio 9 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

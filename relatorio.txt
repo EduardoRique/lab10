@@ -1,3 +1,5 @@
+Objetivo: Identificar e tratar possíveis erros na execução do programa.
+
 Erros esperados:
 
 Estouro de pilha;
@@ -5,3 +7,21 @@ Estouro de fila;
 Pilha vazia;
 Fila vazia;
 Inserir elemento de tipo diferente do container que será inserido;
+Elemento não encontrado(tanto na lista, como nas buscas);
+
+Solucionando o problema:
+
+Foi criado um arquivo .h para a implementação das classes de tratamento, cada uma bem generalista para 
+atender ao máximo possível das estruturas sem repetição de codigo. Para os problemas envolvendo a fila, 
+e a pilha, foram adicionados dentro de cada classe nas suas funções de inserção e remoção a estratégia 
+de solução. Quanto ao restante dos problemas, foram implementados os tratamentos na função principal do
+programa.
+
+Testes:
+
+Como o programa não possui interação com o usuario, foram colocados erros propositais para serem acusados
+e tratados. no estouro, foram colocados elementos a mais, nas estruturas vazias, foi tentada a remoção quando
+estava sem elementos. Foram declaradas estruturas do tipo int e a tentativa de inserção de um double declarado 
+no inicio do programa e foram buscados elementos que não se encontravam no vetor.
+
+
